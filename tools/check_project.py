@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import re
 import sys
+import zipfile
 
 sys.dont_write_bytecode = True
 from lua_runtime import LuaRuntime
@@ -29,9 +30,21 @@ secret = re.compile(
     r'\b(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{30,}|'
     r'sk-(?:proj-)?[A-Za-z0-9_-]{20,}|(?:AKIA|ASIA)[A-Z0-9]{16})\b')
 absolute = re.compile(r'(?<![A-Za-z0-9_])(?:[A-Za-z]:[\\/]|\\\\[A-Za-z0-9_.-]+\\)')
+dependencies = json.loads((ROOT / 'vendor/DEPENDENCIES.record').read_text(encoding='utf-8'))
+allowed_archives = {'vendor/' + dependencies[key]['archive']: dependencies[key]['sha256']
+                    for key in ('lovely', 'smods')}
 for path, digest in manifest.items():
     data = files[path].read_bytes()
     assert hashlib.sha256(data).hexdigest() == digest, 'Manifest mismatch: ' + path
+    if path in allowed_archives:
+        assert digest == allowed_archives[path], 'Dependency digest mismatch: ' + path
+        with zipfile.ZipFile(files[path]) as archive:
+            assert archive.testzip() is None
+            for name in archive.namelist():
+                assert not name.startswith('/') and ':' not in name and '\\' not in name
+                assert '..' not in Path(name).parts
+        continue
+    assert not path.endswith('.zip'), 'Unapproved archive: ' + path
     text = data.decode('utf-8-sig')
     assert not secret.search(text), 'Possible credential; value withheld: ' + path
     assert not absolute.search(text), 'Local absolute path: ' + path

@@ -13,8 +13,13 @@ BalatroDrawController/
 ├─ LICENSE
 ├─ CHANGELOG.md
 ├─ MANIFEST.sha256
+├─ install.cmd
+├─ install/
+├─ vendor/
+├─ THIRD_PARTY_NOTICES.md
 ├─ docs/
 │  ├─ OPEN_SOURCE_PACKAGE.md
+│  ├─ INSTALLER.md
 │  └─ VERIFICATION.md
 ├─ tests/
 └─ tools/
@@ -22,15 +27,15 @@ BalatroDrawController/
 
 This folder is independent of the game installation and can serve as the repository root. Its runtime metadata and main entry remain directly at the root, preserving normal SMODS installation layout. Tests and tools are development resources, not additional in-game Mods.
 
-保留的公开内容：本 Mod 自编 Lua、双语本地化、原 MIT 署名、入门说明、修改记录、可移植测试与文件哈希清单。
+保留的公开内容：本 Mod 自编 Lua、双语本地化、原 MIT 署名、入门说明、修改记录、可移植测试、离线安装脚本、固定依赖原包及各自许可证、文件哈希清单。
 
-排除的内容：游戏 EXE/DLL、游戏 Lua 抽取结果、图像与音频资源、Lovely/SMODS 副本、个人存档和配置、原始日志、截图、聊天与私人调查记录、旧版本备份、临时测试驱动、缓存和开发机路径。
+排除的内容：游戏本体 EXE/DLL、游戏 Lua 抽取结果、原版图像与音频资源、个人存档和配置、原始日志、截图、聊天与私人调查记录、旧版本备份、临时测试驱动、缓存和开发机路径。Lovely MIT 原包与 SMODS GPLv3 完整源码包作为独立前置依赖提供，各自许可证保持不变。
 
-`LICENSE` and metadata retain the original public author attribution. Copyright belongs to the respective owners; this Mod's license does not relicense Balatro or its loaders. Game assets are referenced at runtime and are not included.
+`LICENSE` and metadata retain the original public author attribution. This Mod's license does not relicense Balatro or its loaders. The two vendor ZIPs are an explicit redistribution exception, with full source/licenses and hashes described in [third-party notices](../THIRD_PARTY_NOTICES.md). Original game assets are referenced at runtime and are not included.
 
 ## Publication boundary
 
-- This is a local source archive; creating it does not create a Git repository or upload anything.
+- The public repository and downloadable bundle contain only the files listed in the manifest.
 - Publish only this isolated folder, not its parent game/development directory.
 - Keep the repair-candidate status visible until complete live acceptance is finished.
 - `.gitignore` helps prevent accidental additions; the manifest and scanner check actual included files independently of ignore rules.

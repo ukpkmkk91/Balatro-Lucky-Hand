@@ -18,6 +18,8 @@ dist/
 *.tmp
 *.bak
 *.zip
+!vendor/lovely-0.10.0-windows-x64.zip
+!vendor/smods-39182f0-source.zip
 
 # Game/loader binaries and private player data
 *.exe

@@ -2,12 +2,13 @@
 
 ## Package status
 
-This is the **0.8.1 repair-candidate source package**. Production Lua is copied byte-for-byte from the repaired development source; packaging changes documentation and portable test tooling only. No dependency upgrade or gameplay feature was added while packaging.
+This is the **0.8.1 repair-candidate bundle**. Production Lua is copied byte-for-byte from the repaired development source. Packaging adds documentation, portable test tooling, an offline installer and the previously pinned dependency archives. No dependency upgrade or gameplay feature was added while packaging.
 
 固定基线：Windows 11 x64、Balatro `1.0.1o-FULL`、Lovely `0.10.0`、SMODS `26.829.0` / commit `39182f0cc7b1af86d3d3d6afc5422661a07b4312`。
 
 - Private development checks: 28 Mod Lua syntax checks; 137 grouped checks and legacy M3/M4 regressions passed. These are automated fixture checks, not 137 complete game runs.
 - Public checks included here: 8 preview regressions and 13 protection/persistence regressions. Native functions for the latter are read from the tester's own Lovely dump and kept in memory, not bundled or written to the repository.
+- Installer checks: `python -B tests/test_installer.py` runs 10 checks using generated identity-only fixtures and disposable target directories. It covers dry run, fresh/repeated offline setup, wrong versions, conflicting dependencies, cancellation, archive tampering and rollback. It does not install into the real game directory and is not a cross-machine gameplay test.
 - Full live verification and final gameplay-release acceptance for 0.8.1 remain pending. Do not present older 0.8.0 live testing as proof of 0.8.1 live acceptance.
 - 截图、原始日志、用户存档、临时测试 Mod 及从游戏抽取的函数文件均不随源码发布。
 

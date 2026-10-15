@@ -10,7 +10,11 @@ Choose your next draw, Boss Blind, shop offers, and booster pack contents. Explo
 
 **源码包入口 / Source package:** [MIT License](LICENSE) · [修改记录 / Changelog](CHANGELOG.md) · [公开包范围 / Package contents](docs/OPEN_SOURCE_PACKAGE.md) · [验证与测试 / Testing](docs/VERIFICATION.md)
 
-当前包为 **0.8.1 修复候选源码**，含 Mod 代码及 21 项可移植定向测试，未包含游戏或加载器。完整实机验收仍待完成。This is repair-candidate source, not a claim of completed live acceptance.
+当前包为 **0.8.1 修复候选一体包**，包含 Mod、Lovely 和 SMODS 的固定依赖原包。解压后双击 **install.cmd**，选择游戏目录并确认即可安装，无需另找前置文件。游戏本体须自行合法安装，完整实机及跨电脑验收仍待完成。
+
+**[下载完整安装包 / Download the complete bundle](https://github.com/ukpkmkk91/Balatro-Lucky-Hand/archive/refs/heads/main.zip)**（也可在本仓库点击 Code → Download ZIP）。
+
+**Bundled setup:** extract the complete ZIP, run **install.cmd**, select your Balatro folder and confirm. Pinned Lovely and SMODS archives are included; no separate dependency downloads are needed. The game itself is not included. This remains a repair candidate, not a claim of complete cross-machine acceptance. [安装说明 / Installer guide](docs/INSTALLER.md)
 
 ## 中文说明
 
@@ -53,9 +57,11 @@ Choose your next draw, Boss Blind, shop offers, and booster pack contents. Explo
 
 ### 3. 安装方法
 
-已安装正确版本 Lovely 和 SMODS 的用户，可以直接进行第 3 步。
+**推荐：一体离线安装。** 下载完整 ZIP → 解压 → 退出游戏 → 双击 **install.cmd** → 选择包含 `Balatro.exe` 的目录 → 输入 **INSTALL** 确认 → 正常启动游戏，松开 **F8**。
 
-**此 ZIP 是完整的本 Mod 源码包，可直接作为 Mod 文件夹安装，无需编译或运行 Python。它不是独立软件，也不包含 Balatro、Lovely 或 SMODS；这些前置组件必须先单独安装。Python 只供开发者运行可选测试，普通玩家使用面板不需要它。** 包内没有因开源整理而裁剪运行模块；可用功能仍受上面的版本检查、游戏状态和官方规则限制。
+包中已包含 Lovely 和 SMODS，无需联网下载、Python 或编译；安装器使用 Windows 自带 PowerShell，不自动提权，不修改永久执行策略。已有不同版本依赖时会先停止提示。详细备份、权限和冲突说明见[安装器文档](docs/INSTALLER.md)。
+
+下列步骤保留为手动安装方式，已安装正确版本 Lovely 和 SMODS 时可直接进行第 3 步。普通玩家使用面板不需要运行开发测试。包内运行模块完整，可用功能仍受上面的版本检查、游戏状态和官方规则限制。
 
 1. **安装 Lovely。** 退出游戏，从 [Lovely 0.10.0 官方发行页](https://github.com/ethangreen-dev/lovely-injector/releases/tag/v0.10.0) 下载 Windows x64 包，将其中的 `winmm.dll` 放到 `Balatro.exe` 同一目录。
 2. **安装 SMODS。** 下载[固定 commit 源码包](https://github.com/Steamodded/smods/archive/39182f0cc7b1af86d3d3d6afc5422661a07b4312.zip)，将实际包含 SMODS 文件的文件夹放到 `%AppData%\Balatro\Mods\smods`。路径说明可参考 [SMODS 官方 Windows 安装文档](https://docs.smods.dev/Installation/Installing%20Steamodded%20windows/)；本项目仍使用上表固定版本。
@@ -79,7 +85,7 @@ Choose your next draw, Boss Blind, shop offers, and booster pack contents. Explo
    └─ localization/
 ```
 
-不要重复嵌套成 `BalatroDrawController/BalatroDrawController/main.lua`，也不要把整个游戏目录作为 Mod 安装或上传。游戏、加载器、存档和私人日志不属于本项目的开源发布内容。
+不要重复嵌套成 `BalatroDrawController/BalatroDrawController/main.lua`，也不要把整个游戏目录作为 Mod 安装或上传。游戏本体、存档和私人日志不随包提供；依赖以未修改原包独立提供，许可见[第三方声明](THIRD_PARTY_NOTICES.md)。
 
 **更新 / 卸载：** 退出游戏，将旧 Mod 文件夹移到 Mods 目录外，再放入新版本；移出本 Mod 即可卸载。保留自己的存档和配置，共享的 Lovely / SMODS 无需随之卸载。
 
@@ -147,14 +153,16 @@ As of 2026-10-15, **0.8.1 is a repair candidate** with 137 development grouped c
 
 ### 3. Installation
 
-**This ZIP contains the complete Mod and can be installed directly without compilation or Python. It is not a standalone application: Balatro, Lovely and SMODS must be installed separately. Python is required only for optional developer checks.** No runtime modules were removed during source packaging; available features still depend on the version guards, game state and official rules above.
+**Recommended offline setup:** download and extract the full bundle → close Balatro → run **install.cmd** → select the game folder → type **INSTALL** → launch normally and release F8. Lovely and SMODS are already included. No internet, Python or compilation is required. The installer does not elevate itself or change the permanent execution policy; conflicting dependencies are refused. See the [installer guide](docs/INSTALLER.md).
+
+The steps below remain available for manual setup. Python is required only for optional developer checks. No runtime modules were removed; available features still depend on the version guards, game state and official rules above.
 
 1. Exit Balatro. Download the Windows x64 archive from the [Lovely 0.10.0 release](https://github.com/ethangreen-dev/lovely-injector/releases/tag/v0.10.0) and place `winmm.dll` beside `Balatro.exe`.
 2. Extract the [pinned SMODS source](https://github.com/Steamodded/smods/archive/39182f0cc7b1af86d3d3d6afc5422661a07b4312.zip) into `%AppData%\Balatro\Mods\smods`. See the [official Windows guide](https://docs.smods.dev/Installation/Installing%20Steamodded%20windows/) for folder placement; retain the pinned version above.
 3. Extract `BalatroDrawController-0.8.1-source.zip` and place its `BalatroDrawController` folder in `%AppData%\Balatro\Mods`. Its `main.lua` and `BalatroDrawController.json` must be directly inside that folder. Keep `src`, `localization` and `config.lua`. Tests, tools and documentation may remain in the folder; normal gameplay does not require running them.
 4. Launch Balatro, check the Mods list, enter a run, and release **F8** to open the panel.
 
-Avoid nested or duplicate Mod folders. To update or uninstall, exit the game and move the old Mod folder outside Mods. Keep your saves and preferences. Game binaries, loaders, saves, and private logs are not part of the open-source distribution.
+Avoid nested or duplicate Mod folders. To update or uninstall, exit the game and move the old Mod folder outside Mods. Keep your saves and preferences. Game binaries, saves and private logs are excluded. Bundled loader archives retain their independent licenses; see [third-party notices](THIRD_PARTY_NOTICES.md).
 
 ### 4. Usage
 
@@ -185,6 +193,6 @@ Inputs are panel actions, not CLI commands. Outputs are results of subsequent na
 
 ## 许可证 / License
 
-本项目采用 **MIT License**，完整条款见 [LICENSE](LICENSE)。使用、修改或分发本项目时，请保留原版权声明和许可证文本。Balatro 游戏及 Lovely、Steamodded 等依赖不包含在本包中，其权利与许可证由各自所有者保留。
+本 Mod 与安装脚本采用 **MIT License**，完整条款见 [LICENSE](LICENSE)。使用、修改或分发时，请保留原版权声明和许可证文本。随包独立提供的 Lovely 为 MIT、SMODS 为 GPLv3，完整源码和各自许可均保留，详见[第三方声明](THIRD_PARTY_NOTICES.md)。Balatro 游戏本体不在包中。
 
-This project is licensed under the **MIT License**; see [LICENSE](LICENSE) for the full terms. Retain the original copyright and license notice when using, modifying or distributing this project. Balatro and its dependencies are not included and retain their respective rights and licenses.
+The controller and installer use the **MIT License**; see [LICENSE](LICENSE). Retain the original copyright and license notice. Independently bundled Lovely uses MIT and SMODS uses GPLv3; their notices and SMODS source remain intact. See [third-party notices](THIRD_PARTY_NOTICES.md). Balatro itself is not included.

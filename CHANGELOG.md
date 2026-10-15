@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.8.1 bundle update
+
+- Add an offline Windows installer with folder selection, game identity/version checks, checksums, explicit confirmation, conflict refusal, backup and rollback.
+- Include unmodified official Lovely 0.10.0 Windows x64 archive (MIT) and SMODS 26.829.0 complete source at the pinned commit (GPLv3), preserving notices and licenses independently.
+- 下载完整包后解压、双击 install.cmd 并确认目标即可安装前置依赖与本 Mod；不修改游戏本体、存档或 Steam 设置，不自动提权。
+- The Mod's 28 runtime Lua files remain unchanged. Existing candidate and cross-machine testing boundaries remain in effect.
+
 ## 0.8.1 — repair candidate / 修复候选
 
 - Distinguish explicit Mod selections from ordinary native discovery bypass flags. Normal shop purchases after loading can record discoveries normally.
