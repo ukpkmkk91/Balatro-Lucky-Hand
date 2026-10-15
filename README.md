@@ -182,3 +182,9 @@ Inputs are panel actions, not CLI commands. Outputs are results of subsequent na
 | Queue Jupiter for a Celestial Pack | An eligible matching candidate uses Jupiter, subject to native guarantees; cost and selection count are unchanged. |
 | Apply Negative to an owned Joker | The same instance receives Negative and native slot handling; no Joker is cloned. |
 | Search `Glass Gold` in Current Deck | Rows matching both terms are shown without changing the deck. |
+
+## 许可证 / License
+
+本项目采用 **MIT License**，完整条款见 [LICENSE](LICENSE)。使用、修改或分发本项目时，请保留原版权声明和许可证文本。Balatro 游戏及 Lovely、Steamodded 等依赖不包含在本包中，其权利与许可证由各自所有者保留。
+
+This project is licensed under the **MIT License**; see [LICENSE](LICENSE) for the full terms. Retain the original copyright and license notice when using, modifying or distributing this project. Balatro and its dependencies are not included and retain their respective rights and licenses.
