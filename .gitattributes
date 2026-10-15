@@ -1,0 +1,7 @@
+# Preserve exact source bytes so MANIFEST.sha256 stays valid after checkout.
+* -text
+*.lua diff
+*.py diff
+*.md diff
+*.json diff
+*.sha256 diff

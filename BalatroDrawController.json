@@ -1,0 +1,16 @@
+{
+  "id": "balatro_draw_controller",
+  "name": "Balatro Draw Controller",
+  "author": [
+    "Clemm"
+  ],
+  "description": "Official card inspector, next-draw and one-shot choices; remembered Chinese/English panel, dropdowns, hover previews and owned Joker editions.",
+  "prefix": "bdctrl",
+  "main_file": "main.lua",
+  "version": "0.8.1",
+  "dependencies": [
+    "Steamodded (>=26.829.0)",
+    "Lovely (>=0.10.0)"
+  ],
+  "badge_colour": "287C91"
+}

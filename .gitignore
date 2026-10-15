@@ -1,0 +1,36 @@
+# Local credentials and machine settings
+.env
+.env.*
+*.pem
+*.key
+*.p12
+.idea/
+.vscode/
+
+# Python caches and generated checks
+__pycache__/
+*.py[cod]
+.venv/
+artifacts/
+build/
+dist/
+*.log
+*.tmp
+*.bak
+*.zip
+
+# Game/loader binaries and private player data
+*.exe
+*.dll
+*.jkr
+native-user-*/
+native-test-*/
+test-driver/
+command.lua
+command.pending
+result.record
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
