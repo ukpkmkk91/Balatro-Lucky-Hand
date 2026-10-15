@@ -53,9 +53,9 @@ for path, digest in manifest.items():
         runtime.check(data, path)
 meta = json.loads((ROOT / 'BalatroDrawController.json').read_text(encoding='utf-8'))
 assert meta['id'] == 'balatro_draw_controller' and meta['prefix'] == 'bdctrl'
-assert meta['version'] == '0.8.1' and meta['main_file'] == 'main.lua'
+assert meta['version'] == '0.1.0' and meta['main_file'] == 'main.lua'
 assert meta['dependencies'] == ['Steamodded (>=26.829.0)', 'Lovely (>=0.10.0)']
-assert "version = '0.8.1'" in (ROOT / 'main.lua').read_text(encoding='utf-8')
+assert "version = '0.1.0'" in (ROOT / 'main.lua').read_text(encoding='utf-8')
 source = ('ROOT=' + json.dumps(ROOT.as_posix()) + '\n' +
           (ROOT / 'tests/test_stone.lua').read_text(encoding='utf-8')).encode('utf-8')
 runtime.check(source, 'public preview regressions', execute=True)

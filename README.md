@@ -1,6 +1,10 @@
-# Balatro Draw Controller
+# Balatro Lucky Hand
 
 **小丑牌游戏内控制面板 · In-game control panel for Balatro**
+
+游戏内名称为 **Balatro Draw Controller**，安装文件夹为 `BalatroDrawController`。仓库名称不会改变现有 Mod 的识别方式。
+
+The in-game name is **Balatro Draw Controller** and the installation folder is `BalatroDrawController`.
 
 自由选择下一次抽牌、Boss、商店与补充包内容，通过卡牌预览、悬停介绍和一次性随机结果控制，体验更多策略与组合。
 
@@ -8,13 +12,21 @@ Choose your next draw, Boss Blind, shop offers, and booster pack contents. Explo
 
 [中文说明](#中文说明) · [English](#english)
 
-**源码包入口 / Source package:** [MIT License](LICENSE) · [修改记录 / Changelog](CHANGELOG.md) · [公开包范围 / Package contents](docs/OPEN_SOURCE_PACKAGE.md) · [验证与测试 / Testing](docs/VERIFICATION.md)
+**项目文档 / Documentation:** [安装说明 / Installation](docs/INSTALLER.md) · [使用方法 / Usage](#4-使用方法) · [发布说明 / Release notes](docs/RELEASE_NOTES.md) · [修改记录 / Changelog](CHANGELOG.md) · [验证范围 / Testing](docs/VERIFICATION.md) · [MIT License](LICENSE) · [第三方许可 / Third-party licenses](THIRD_PARTY_NOTICES.md)
 
-当前包为 **0.8.1 修复候选一体包**，包含 Mod、Lovely 和 SMODS 的固定依赖原包。解压后双击 **install.cmd**，选择游戏目录并确认即可安装，无需另找前置文件。游戏本体须自行合法安装，完整实机及跨电脑验收仍待完成。
+当前包为 **v0.1.0 首次公开发行一体包**，基于此前开发编号 `0.8.1` 整理；版本重新编号不改变游戏功能。包内包含 Mod、Lovely 和 SMODS 的固定依赖原包。解压后双击 **install.cmd**，选择游戏目录并确认即可安装，无需另找前置文件。游戏本体须自行合法安装，完整实机及跨电脑验收仍待完成。
 
-**[下载完整安装包 / Download the complete bundle](https://github.com/ukpkmkk91/Balatro-Lucky-Hand/archive/refs/heads/main.zip)**（也可在本仓库点击 Code → Download ZIP）。
+**下载 / Download:** [v0.1.0 完整安装包 / Complete bundle](https://github.com/ukpkmkk91/Balatro-Lucky-Hand/releases/download/v0.1.0/Balatro-Lucky-Hand-0.1.0-windows-x64.zip) · [发布说明 / Release](https://github.com/ukpkmkk91/Balatro-Lucky-Hand/releases/tag/v0.1.0) · [当前开发快照 / Development snapshot](https://github.com/ukpkmkk91/Balatro-Lucky-Hand/archive/refs/heads/main.zip)
 
-**Bundled setup:** extract the complete ZIP, run **install.cmd**, select your Balatro folder and confirm. Pinned Lovely and SMODS archives are included; no separate dependency downloads are needed. The game itself is not included. This remains a repair candidate, not a claim of complete cross-machine acceptance. [安装说明 / Installer guide](docs/INSTALLER.md)
+在 Releases 的 **Assets** 中下载 `Balatro-Lucky-Hand-0.1.0-windows-x64.zip`，即可得到含全部前置依赖的一体包；旁边的 `.sha256` 文件用于校验。开发快照随 `main` 更新，不能作为固定发行版本。
+
+The first public release is **v0.1.0**, based on development build `0.8.1`; the version reset does not change gameplay behavior. Download `Balatro-Lucky-Hand-0.1.0-windows-x64.zip` and its optional `.sha256` checksum from the release **Assets**. Development snapshots follow `main` and are not fixed releases.
+
+**Bundled setup:** extract the complete ZIP, run **install.cmd**, select your Balatro folder and confirm. Pinned Lovely and SMODS archives are included; no separate dependency downloads are needed. The game itself is not included. Full live functional and cross-machine acceptance remain pending. [安装说明 / Installer guide](docs/INSTALLER.md)
+
+**快速上手 / Quick start:** 下载并完整解压 → 退出游戏 → 双击 `install.cmd` → 选择游戏目录 → 输入 `INSTALL` → 进入牌局后按下并松开 **F8**。
+
+Download and extract → close the game → run `install.cmd` → select the game folder → type `INSTALL` → enter a run and press and release **F8**.
 
 ## 中文说明
 
@@ -51,7 +63,7 @@ Choose your next draw, Boss Blind, shop offers, and booster pack contents. Explo
 | Steamodded / SMODS | `26.829.0`，commit `39182f0cc7b1af86d3d3d6afc5422661a07b4312` |
 | 界面语言 | 简体中文、English |
 
-截至 2026-10-15，`0.8.1` 为修复候选版：开发阶段已通过 137 项分组检查及 M3/M4 旧回归；本源码包包含并通过 21 项定向测试。源码包已完成结构、完整性与隐私检查，0.8.1 的完整实机功能验收仍未完成。它针对 `0.8.0` 的图鉴发现保护与卡牌预览问题进行了修复。
+截至 2026-10-15，`v0.1.0` 基于开发编号 `0.8.1`：该开发基线曾通过 137 项分组检查及 M3/M4 旧回归，公开包通过了 21 项定向回归和 10 项安装器隔离测试。首发只重新编号和整理发布材料，保留对旧 `0.8.0` 图鉴发现保护与卡牌预览问题的修复；完整实机及跨电脑验收仍未完成。[检查范围](docs/VERIFICATION.md)
 
 这些是固定验证版本，不代表任意最新版均兼容。运行时检测到未支持的版本会关闭修改功能，可用时保留只读界面。第三方内容 Mod 兼容、UI 美化及更多语言尚未纳入当前已完成功能。
 
@@ -63,9 +75,9 @@ Choose your next draw, Boss Blind, shop offers, and booster pack contents. Explo
 
 下列步骤保留为手动安装方式，已安装正确版本 Lovely 和 SMODS 时可直接进行第 3 步。普通玩家使用面板不需要运行开发测试。包内运行模块完整，可用功能仍受上面的版本检查、游戏状态和官方规则限制。
 
-1. **安装 Lovely。** 退出游戏，从 [Lovely 0.10.0 官方发行页](https://github.com/ethangreen-dev/lovely-injector/releases/tag/v0.10.0) 下载 Windows x64 包，将其中的 `winmm.dll` 放到 `Balatro.exe` 同一目录。
-2. **安装 SMODS。** 下载[固定 commit 源码包](https://github.com/Steamodded/smods/archive/39182f0cc7b1af86d3d3d6afc5422661a07b4312.zip)，将实际包含 SMODS 文件的文件夹放到 `%AppData%\Balatro\Mods\smods`。路径说明可参考 [SMODS 官方 Windows 安装文档](https://docs.smods.dev/Installation/Installing%20Steamodded%20windows/)；本项目仍使用上表固定版本。
-3. **安装本 Mod。** 解压 `BalatroDrawController-0.8.1-source.zip`，将其中的 `BalatroDrawController` 文件夹放到 `%AppData%\Balatro\Mods`。确认该文件夹内直接包含 `main.lua` 和 `BalatroDrawController.json`；保留 `src`、`localization` 和 `config.lua`。`tests`、`tools` 与说明文档可以随包保留，正常游戏不会要求执行它们。
+1. **安装 Lovely。** 退出游戏，解压包内 `vendor/lovely-0.10.0-windows-x64.zip`，将 `winmm.dll` 放到 `Balatro.exe` 同一目录，并将 `vendor/LICENSE-Lovely-MIT.txt` 一同保留。依赖来自 [Lovely 0.10.0 官方发行页](https://github.com/ethangreen-dev/lovely-injector/releases/tag/v0.10.0)。
+2. **安装 SMODS。** 解压包内 `vendor/smods-39182f0-source.zip`，将解压出的唯一顶层文件夹重命名为 `smods`，放到 `%AppData%\Balatro\Mods`，保留其全部文件与许可证。不要重复套一层目录。
+3. **安装本 Mod。** 将本包包含 `main.lua` 和 `BalatroDrawController.json` 的文件夹命名为 `BalatroDrawController`，放到 `%AppData%\Balatro\Mods`；保留 `src`、`localization` 和 `config.lua`。使用 Code → Download ZIP 时，顶层文件夹通常带有 `-main` 后缀，需要重命名。`tests`、`tools` 与说明文档可以随包保留，正常游戏不会要求执行它们。
 4. **启动并检查。** 启动 Balatro，确认 Mods / 模组列表中出现 **Balatro Draw Controller**；进入牌局，松开 **F8** 打开面板。
 
 正确目录结构：
@@ -110,7 +122,7 @@ Choose your next draw, Boss Blind, shop offers, and booster pack contents. Explo
 
 - 待抽队列、随机预约和页面记忆不写入存档；返回主菜单、重开或载入会清空待执行队列。
 - 正常获得的卡牌和已应用的小丑牌版本由游戏保存。临时扑克牌离开手牌并完成原生处理后移除，存档会排除它；载入时手牌可能少一张，后续按原生流程补牌。
-- `0.8.1` 将明确由 Mod 指定的未解锁 / 未发现对象来源记录随当前战局保存，用于续局后继续保护永久图鉴记录。它不保存待执行队列；同一对象 key 的保护作用于本局。
+- `v0.1.0`（原开发编号 `0.8.1`）将明确由 Mod 指定的未解锁 / 未发现对象来源记录随当前战局保存，用于续局后继续保护永久图鉴记录。它不保存待执行队列；同一对象 key 的保护作用于本局。
 - `0.8.0` 旧存档缺少可靠来源信息，无法追溯区分此前指定的对象。验证新保护行为时，建议从新牌局开始。
 
 **常见问题：** 没有 Mods 按钮时检查加载器和目录层级；F8 无响应时检查是否已改键，或通过本 Mod 的 Config 鼠标入口打开；选择未生效时检查是否正在等待下一次合格事件。日志位于 `%AppData%\Balatro\Mods\lovely\log`。
@@ -149,7 +161,7 @@ It uses **Balatro → Lovely → Steamodded / SMODS → this Mod**. Draw counts,
 
 **Compatible versions: the author's locally validated combination only.** Development and validation currently cover the author's own PC. The same version combination is the installation target for other users, but full functionality has not been verified on other computers. This is a testing boundary, not a username or installation-drive lock.
 
-As of 2026-10-15, **0.8.1 is a repair candidate** with 137 development grouped checks plus legacy M3/M4 regressions passing. This source package includes 21 passing targeted tests and has passed structure, integrity and privacy checks; complete live functional acceptance of 0.8.1 remains pending. It addresses discovery protection and preview defects found in 0.8.0. UI redesign and additional languages are planned work.
+As of 2026-10-15, **v0.1.0** is based on development build `0.8.1`, whose baseline passed 137 grouped checks, legacy M3/M4 regressions, 21 public targeted regressions and 10 isolated installer checks. This release renumbers and packages that implementation, retaining its discovery-protection and preview repairs. Full live functional and cross-machine acceptance remain pending. UI redesign and additional languages are planned work. See [verification scope](docs/VERIFICATION.md).
 
 ### 3. Installation
 
@@ -157,9 +169,9 @@ As of 2026-10-15, **0.8.1 is a repair candidate** with 137 development grouped c
 
 The steps below remain available for manual setup. Python is required only for optional developer checks. No runtime modules were removed; available features still depend on the version guards, game state and official rules above.
 
-1. Exit Balatro. Download the Windows x64 archive from the [Lovely 0.10.0 release](https://github.com/ethangreen-dev/lovely-injector/releases/tag/v0.10.0) and place `winmm.dll` beside `Balatro.exe`.
-2. Extract the [pinned SMODS source](https://github.com/Steamodded/smods/archive/39182f0cc7b1af86d3d3d6afc5422661a07b4312.zip) into `%AppData%\Balatro\Mods\smods`. See the [official Windows guide](https://docs.smods.dev/Installation/Installing%20Steamodded%20windows/) for folder placement; retain the pinned version above.
-3. Extract `BalatroDrawController-0.8.1-source.zip` and place its `BalatroDrawController` folder in `%AppData%\Balatro\Mods`. Its `main.lua` and `BalatroDrawController.json` must be directly inside that folder. Keep `src`, `localization` and `config.lua`. Tests, tools and documentation may remain in the folder; normal gameplay does not require running them.
+1. Exit Balatro. Extract the bundled `vendor/lovely-0.10.0-windows-x64.zip` and place `winmm.dll` beside `Balatro.exe`, retaining `vendor/LICENSE-Lovely-MIT.txt` alongside it. The archive comes from the [official Lovely 0.10.0 release](https://github.com/ethangreen-dev/lovely-injector/releases/tag/v0.10.0).
+2. Extract `vendor/smods-39182f0-source.zip`, rename its single top-level folder to `smods`, and place it in `%AppData%\Balatro\Mods`, preserving all files and licenses. Avoid an extra nesting level.
+3. Rename this bundle's folder containing `main.lua` and `BalatroDrawController.json` to `BalatroDrawController` and place it in `%AppData%\Balatro\Mods`. The Code → Download ZIP folder normally ends in `-main` and needs renaming. Keep `src`, `localization` and `config.lua`. Tests, tools and documentation may remain in the folder; normal gameplay does not require running them.
 4. Launch Balatro, check the Mods list, enter a run, and release **F8** to open the panel.
 
 Avoid nested or duplicate Mod folders. To update or uninstall, exit the game and move the old Mod folder outside Mods. Keep your saves and preferences. Game binaries, saves and private logs are excluded. Bundled loader archives retain their independent licenses; see [third-party notices](THIRD_PARTY_NOTICES.md).
@@ -174,7 +186,7 @@ Avoid nested or duplicate Mod folders. To update or uninstall, exit the game and
 
 Queues and view memory are not saved; run loading or restarting clears pending choices. Native outcomes and edited Joker editions remain part of the run save. Temporary playing cards are omitted from saves and removed after native hand processing; loading may leave one fewer card until the next replenishment.
 
-Version 0.8.1 persists only explicit run-only protection provenance alongside the current run, including selected undiscovered editions; it never persists pending queues or writes permanent unlock records for those selections. Protection is per object key for that run. Old 0.8.0 saves lack reliable provenance, so previous selections cannot be reconstructed; use a new run to verify the repaired behavior.
+Version 0.1.0 (formerly development build 0.8.1) persists only explicit run-only protection provenance alongside the current run, including selected undiscovered editions; it never persists pending queues or writes permanent unlock records for those selections. Protection is per object key for that run. Old 0.8.0 saves lack reliable provenance, so previous selections cannot be reconstructed; use a new run to verify the repaired behavior.
 
 If the panel is unavailable, check loader installation, folder nesting, and the configured key. The Mod's Config button provides a mouse entry point. Logs are in `%AppData%\Balatro\Mods\lovely\log`.
 

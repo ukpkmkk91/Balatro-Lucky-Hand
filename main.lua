@@ -5,7 +5,7 @@ if rawget(_G, 'BDC') then
     if sendWarnMessage then sendWarnMessage('BDC namespace is already occupied; Inspector disabled', 'BDC') end
     return
 end
-local BDC = {mod = mod, version = '0.8.1', config = mod.config or {}, disabled = false}
+local BDC = {mod = mod, version = '0.1.0', config = mod.config or {}, disabled = false}
 _G.BDC = BDC
 local function load_module(path)
     local chunk, err = SMODS.load_file(path, mod.id)

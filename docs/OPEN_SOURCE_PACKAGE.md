@@ -20,6 +20,8 @@ BalatroDrawController/
 ├─ docs/
 │  ├─ OPEN_SOURCE_PACKAGE.md
 │  ├─ INSTALLER.md
+│  ├─ RELEASE_NOTES.md
+│  ├─ FIRST_RELEASE_REVIEW.md
 │  └─ VERIFICATION.md
 ├─ tests/
 └─ tools/
@@ -37,9 +39,9 @@ This folder is independent of the game installation and can serve as the reposit
 
 - The public repository and downloadable bundle contain only the files listed in the manifest.
 - Publish only this isolated folder, not its parent game/development directory.
-- Keep the repair-candidate status visible until complete live acceptance is finished.
+- Keep the unfinished live and cross-machine acceptance scope visible in release notes.
 - `.gitignore` helps prevent accidental additions; the manifest and scanner check actual included files independently of ignore rules.
-- Readme installation steps, candidate status and testing scope are included in Chinese and English. More UI languages and a visual redesign remain future work.
+- Installation steps, early-release limitations and testing scope are included in Chinese and English. More UI languages and a visual redesign remain future work.
 
 ## Integrity
 

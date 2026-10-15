@@ -130,7 +130,7 @@ try {
         $metadata=Join-Path $modTarget 'BalatroDrawController.json'
         if(-not (Test-Path -LiteralPath $metadata) -or (Get-Content -LiteralPath $metadata -Raw | ConvertFrom-Json).id -ne 'balatro_draw_controller'){throw 'The target Mod folder contains unknown files and will not be replaced.'}
     }
-    Write-Host 'Balatro Lucky Hand: 0.8.1 repair candidate / 修复候选版'
+    Write-Host 'Balatro Lucky Hand: 0.1.0 first public release / 首次公开版本'
     Write-Host ('Game / 游戏: '+$GameDir)
     Write-Host ('Mods / 模组: '+$mods)
     Write-Host 'Installs Lovely 0.10.0 (MIT), SMODS 26.829.0 source (GPLv3), and the controller (MIT).'
@@ -174,7 +174,7 @@ try {
         }
     }
     Write-Host '安装完成 / Installed. Start Balatro normally and release F8 in a run.' -ForegroundColor Green
-    Write-Host 'Only the pinned local version combination is validated; 0.8.1 complete live acceptance remains pending.'
+    Write-Host 'Only the pinned local version combination is validated; 0.1.0 complete live acceptance remains pending.'
 } catch {
     $failure=$_.Exception.Message
     # Roll back only exact targets already recorded above. Retain failed output.

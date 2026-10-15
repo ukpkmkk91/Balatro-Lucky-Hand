@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0 — First public release / 首次公开发布 — 2026-10-15
+
+- Start public version numbering at `0.1.0`, based on development build `0.8.1`; synchronize metadata, runtime version, installer display and release filenames without changing gameplay logic.
+- Include a complete Windows x64 installation ZIP with Lovely 0.10.0 and pinned SMODS 26.829.0, plus a separate SHA-256 checksum.
+- 保留现有抽牌队列、临时扑克牌、一次性官方随机选择、小丑牌版本编辑、图鉴预览、双语面板和快捷键功能。
+- Use **Balatro Lucky Hand** as the repository name; retain the in-game name, Mod ID and installation folder. Full live functional and cross-machine acceptance remain pending.
+- Development entries below retain their original numbering; `0.8.x` was not a prior GitHub Release series.
+
 ## 0.8.1 bundle update
 
 - Add an offline Windows installer with folder selection, game identity/version checks, checksums, explicit confirmation, conflict refusal, backup and rollback.
